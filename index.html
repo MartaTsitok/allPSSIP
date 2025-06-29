@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./rubber.css">
+    <!--JSв теге head-->
+    <script>
+    function sayHello() {
+      alert('Приветствую тебя на этом сайте');
+    }
+  </script>
+</head>
+<body>
+    <div class="bloks-header">
+        <div class="blokone"><img src="./Новая папка/logonl.png" alt=""></div>
+        <div class="bloktwo"></div>
+        <div class="navigation"></div>
+        <div class="blokfour"></div>
+        <div class="blokfive"></div>
+        <div class="bloksix"></div>
+        <div class="blokseven"></div>
+    </div>
+    <!--JS в ссылке-->
+    <a href="javascript:(function(){
+      const now = new Date();
+      alert('Сейчас: ' + now.toLocaleTimeString());
+    })()">
+      Показать текущее время
+    </a>
+    <div class="header-footer">
+        <div class="blokeight">Блок8</div>
+        <div class="blokeight">Блок9</div>
+        <div class="blokeight">Блок10</div>
+        <div class="blokeight">Блок11</div>
+        <div class="blokeight">Блок12</div>
+        <button onclick="sayHello()">Окно</button>
+        <button onclick="showConfirm()">Показать Confirm</button>
+    </div>
+    <div class="switch">
+      <h2>Проверьте день недели cwitch</h2>
+      <input type="text" id="dayInput" placeholder="Введите день недели" />
+      <button onclick="checkDay()">Проверить</button>
+      <p id="result"></p>
+    </div>
+    <div class="if">
+      <h2>Проверка числа с if...else</h2>
+    <input type="number" id="numberInput" placeholder="Введите число" />
+    <button onclick="checkNumber()">Проверить</button>
+    <p id="resulting"></p>
+    </div>
+    <div class="while">
+    <h2>Циклы for, while и do...while</h2>
+    <label for="numInput">Введите положительное число:</label>
+    <input type="number" id="numInput" min="1" placeholder="Например, 5" />
+    <button onclick="runLoops()">Показать циклы</button>
+    <h3>Результаты:</h3>
+    <div>
+        <strong>Цикл for:</strong>
+        <p id="forResult"></p>
+    </div>
+    <div>
+        <strong>Цикл while:</strong>
+        <p id="whileResult"></p>
+    </div>
+    <div>
+        <strong>Цикл do...while:</strong>
+        <p id="doWhileResult"></p>
+    </div>
+    </div>
+    <div class="break">
+      <h2>Демонстрация оператора break</h2>
+    <label for="stopNumber">Введите число от 1 до 10:</label>
+    <input type="number" id="stopNumber" min="1" max="10" placeholder="Например, 5" />
+    <button onclick="runBreakExample()">Запустить цикл</button>
+    <h3>Результат:</h3>
+    <p id="results"></p>
+    </div>
+    <div class="continui">
+      <h2>Оператор continue — пропускаем числа, кратные 3</h2>
+    <label for="numInput">Введите число (1 и больше):</label>
+    <input type="number" id="numInput" min="1" placeholder="Например, 15" />
+    <button onclick="showNumbers()">Показать числа</button>
+    <h3>Результат:</h3>
+    <ul id="resultList"></ul>
+    </div>
+    <div class="return">
+    <h2>Регистрация</h2>
+    <form id="regForm" onsubmit="return validateForm(event)">
+    <label for="username">Имя пользователя (от 3 символов):</label>
+    <input type="text" id="username" name="username" />
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" />
+    <label for="password">Пароль (от 6 символов):</label>
+    <input type="password" id="password" name="password" />
+    <button type="submit" style="margin-top:15px;">Зарегистрироваться</button>
+  </form>
+  <div id="message"></div>
+    </div>
+    <div class="main-blok">
+        <div class="blokthirteen"></div>
+        <div class="columnfourteen">
+            <div class="fourteen"></div>
+            <div class="fiveteen"></div>
+        </div>
+    </div>
+    <div class="minblok">
+        <div class="bloksixteen"></div>
+        <div class="blokseventeen"></div>
+        <div class="eighteen"></div>
+        <div class="nineteen"></div>
+    </div>
+    <div class="footer">
+        <div class="nav">
+            <div class="mainf">Главная</div>
+            <div class="blokf">Блок</div>
+            <div class="cardsf">Карточки</div>
+        </div>
+        <div class="socnets">
+            <div class="insta">Instagram</div>
+            <div class="telega">Telegram</div>
+            <div class="whatsapp">Whatsapp</div>
+        </div>
+        <div class="formsub">
+            <form action="">
+                <input type="email">
+            </form>
+            <a href="#">Подписаться</a>
+        </div>
+    </div>
+    <!--JS подключ файлом-->
+    <script src="./JS/prompt.js"></script>
+    <script src="./JS/switch.JS"></script>
+    <script src="./JS/ifelse.js"></script>
+    <script src="./JS/while.js"></script>
+    <script src="./JS/break.js"></script>
+    <script src="./JS/continue.js"></script>
+    <script src="./JS/return.js"></script>
+    <!--JS В ТЕГЕ SCRIPT-->
+    <script>
+      document.getElementById('btn').addEventListener('click', function() {
+      var script = document.createElement('script');
+      script.textContent = "alert('Hello from dynamically added script!')";
+      document.body.appendChild(script);
+    });
+    </script>
+    <script>
+    function showConfirm() {
+      if(confirm('Вы согласны?')) {
+        alert('Вы нажали OK');
+      } else {
+        alert('Вы нажали Отмена');
+      }
+    }</script>
+</body>
+</html>
